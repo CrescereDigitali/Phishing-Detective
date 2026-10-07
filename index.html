@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phishing Lab | Crescere Digitali</title>
+  <meta name="description" content="Giochi interattivi su phishing e social engineering per il corso CyberSecurity per ragazzi di Crescere Digitali.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <img class="brand-logo" src="assets/logo-crescere-digitali.png" alt="Crescere Digitali">
+    <div class="head-copy">
+      <h1>Phishing Detective</h1>
+      <p>Riconosci phishing, social engineering e messaggi sospetti.</p>
+    </div>
+    <button id="homeBtn" class="ghost-btn hidden" type="button">← Tutti i giochi</button>
+  </header>
+
+  <main id="app">
+    <section id="home" class="screen active" aria-labelledby="homeTitle">
+      <div id="introPanel" class="intro-panel">
+        <div class="eyebrow">LEZIONE 3 · PHISHING & SOCIAL ENGINEERING</div>
+        <h1 id="homeTitle">Phishing Detective</h1>
+        <p class="intro-lead">
+          Ci sono 4 giochi. Per superare ogni gioco devi ottenere almeno il 70% dei punti disponibili.
+          Puoi rifare i giochi non superati finché non raggiungi il punteggio richiesto.
+        </p>
+        <button id="enterGameBtn" class="primary enter-btn" type="button">Entra nel gioco</button>
+      </div>
+
+      <div id="gameHub" class="hidden">
+        <div class="hero">
+          <div class="eyebrow">LEZIONE 3 · PHISHING & SOCIAL ENGINEERING</div>
+          <h1>Phishing Detective</h1>
+          <p>Completa tutti e 4 i giochi con almeno il 70% per smascherare l’hacker.</p>
+          <div class="score-pill">Punteggio sessione: <strong id="totalScore">0</strong> pt</div>
+        </div>
+
+        <div class="game-grid">
+          <button class="game-card" data-game="detective" data-card="detective" type="button">
+            <span class="game-num">01</span>
+            <span class="game-title">Phishing Detective</span>
+            <span class="game-desc">Osserva immagini realistiche e seleziona tutti gli indizi sospetti.</span>
+            <span class="game-status">Non ancora svolto</span>
+            <span class="game-cta">Inizia →</span>
+          </button>
+
+          <button class="game-card" data-game="realorscam" data-card="realorscam" type="button">
+            <span class="game-num">02</span>
+            <span class="game-title">Real or Scam?</span>
+            <span class="game-desc">Confronta due comunicazioni e scegli quella che nasconde la truffa.</span>
+            <span class="game-status">Non ancora svolto</span>
+            <span class="game-cta">Inizia →</span>
+          </button>
+
+          <button class="game-card" data-game="engineer" data-card="engineer" type="button">
+            <span class="game-num">03</span>
+            <span class="game-title">Social Engineer Challenge</span>
+            <span class="game-desc">Capisci quale leva psicologica viene usata e scegli la risposta migliore.</span>
+            <span class="game-status">Non ancora svolto</span>
+            <span class="game-cta">Inizia →</span>
+          </button>
+
+          <button class="game-card" data-game="hotspot" data-card="hotspot" type="button">
+            <span class="game-num">04</span>
+            <span class="game-title">Clicca i segnali</span>
+            <span class="game-desc">Clicca direttamente sui punti dell’immagine che indicano un possibile attacco.</span>
+            <span class="game-status">Non ancora svolto</span>
+            <span class="game-cta">Inizia →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen" aria-live="polite">
+      <div id="gameContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Crescere Digitali</span>
+    <span>CyberSecurity per ragazzi · Lezione 3</span>
+  </footer>
+
+  <div id="imageModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Chiudi">×</button>
+      <img id="modalImage" src="" alt="Anteprima immagine">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
